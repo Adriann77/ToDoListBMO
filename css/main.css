@@ -83,6 +83,10 @@ body {
   display: flex;
 }
 
+.hide {
+  display: none;
+}
+
 .app-body {
   padding: 40px;
   border: 1px solid black;
