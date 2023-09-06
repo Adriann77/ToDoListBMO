@@ -4,11 +4,81 @@
 	padding: 0;
 }
 
+:root {
+	--fontColor: #fff;
+	--bgcolor: #333;
+}
+
 body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Montserrat', sans-serif;
-	background-color: rgb(233, 233, 233);
+	background-color: var(--bgcolor);
+	color: var(--fontColor)
+}
+
+.new-task{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid black;
+	padding: 30px 60px;
+	border-radius: 8px;
+	background-color: rgb(255, 255, 255, .1);
+
+	label{
+		font-size: 32px;
+		margin-bottom: 15px;
+		width: 300px;
+		text-align: center;
+	}
+
+	input{
+		width: 100%;
+		border-radius: 8px;
+		height: 45px;
+		padding: 15px;
+		font-size: 32px;
+		margin-bottom: 10px;
+	}
+
+	select{
+		font-size: 28px;
+		padding: 5px;
+		border-radius: 8px;
+	}
+
+	.btns{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		margin-top: 30px;
+	}
+	
+	button{
+		padding: 15px;
+		text-transform: uppercase;
+		border-radius: 8px;
+		font-size: 24px;
+		width: 160px;
+		cursor: pointer;
+		transition: transform .3s, box-shadow .3s;
+
+		&:hover{
+			transform: scale(1.1);
+			box-shadow: 5px 5px 1px rgb(0, 0, 0, .4);
+		}
+	}
+
+	.save-btn{
+		background-color: green;
+	}
+
+	.discard-btn{
+		background-color: red;
+	}
+
 }

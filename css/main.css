@@ -4,11 +4,72 @@
   padding: 0;
 }
 
+:root {
+  --fontColor: #fff;
+  --bgcolor: #333;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(233, 233, 233);
+  background-color: var(--bgcolor);
+  color: var(--fontColor);
+}
+
+.new-task {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 30px 60px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.new-task label {
+  font-size: 32px;
+  margin-bottom: 15px;
+  width: 300px;
+  text-align: center;
+}
+.new-task input {
+  width: 100%;
+  border-radius: 8px;
+  height: 45px;
+  padding: 15px;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.new-task select {
+  font-size: 28px;
+  padding: 5px;
+  border-radius: 8px;
+}
+.new-task .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.new-task button {
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 24px;
+  width: 160px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.new-task button:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.4);
+}
+.new-task .save-btn {
+  background-color: green;
+}
+.new-task .discard-btn {
+  background-color: red;
 }/*# sourceMappingURL=main.css.map */
