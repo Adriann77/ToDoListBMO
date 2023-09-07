@@ -34,6 +34,11 @@ body {
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
 }
+.new-task .error {
+  display: none;
+  color: red;
+  padding: 10px;
+}
 .new-task label {
   font-size: 32px;
   margin-bottom: 15px;
