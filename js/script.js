@@ -64,11 +64,26 @@ const deleteAllTasks = () => {
 };
 
 const deleteSingleTask = e => {
-	if(e.target.closest('button').classList.contains('trash-btn')){
-        e.target.closest('li').remove()
-        ID--;
-        taskLeftTd.textContent = ID;
-    }
+	if (e.target.closest('button').classList.contains('trash-btn')) {
+		e.target.closest('li').remove();
+		if (e.target.closest('li').classList.contains('done')) {
+		} else {
+			ID--;
+			taskLeftTd.textContent = ID;
+		}
+	} else if (e.target.closest('button').classList.contains('check-btn')) {
+		if (e.target.closest('li').classList.contains('done')) {
+			e.target.closest('li').classList.remove('done');
+			e.target.closest('i').style.color = 'greenyellow';
+			ID++;
+			taskLeftTd.textContent = ID;
+		} else {
+			e.target.closest('li').classList.add('done');
+			ID--;
+			taskLeftTd.textContent = ID;
+			e.target.closest('i').style.color = 'gray';
+		}
+	}
 };
 
 addNewTaskBtn.addEventListener('click', addNewTask);
