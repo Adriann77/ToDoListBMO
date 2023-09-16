@@ -83,8 +83,11 @@ const deleteSingleTask = e => {
 			taskLeftTd.textContent = ID;
 			e.target.closest('i').style.color = 'gray';
 		}
+	}else if(e.target.closest('button').classList.contains('clock-btn')){
+		console.log('tak');
 	}
 };
+
 
 addNewTaskBtn.addEventListener('click', addNewTask);
 discardBtn.addEventListener('click', addNewTask);
